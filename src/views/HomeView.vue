@@ -1,11 +1,23 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
+import { showToast } from 'vant'
 import MaintenanceMenu from '@/components/MaintenanceMenu.vue'
 interface IMaintenanceMenu {
   title: string
   maintenanceObj: Array<{ id: string; imageUrl: string; text: string }>
 }
-
+// tabbar
+const active = ref<number>(0)
+const onChange = (index: number) => {
+  console.log(index)
+  showToast({
+    message: '自定义图标',
+    icon: 'like-o'
+  })
+  showToast(`标签 ${index}`)
+}
+// 主菜单区域
+const goToCommon = () => {}
 // 家电维修
 const homeApplianceMaintenance = reactive<IMaintenanceMenu>({
   title: '家电维修',
@@ -84,7 +96,7 @@ const drainCleaning = reactive<IMaintenanceMenu>({
     </van-swipe>
     <!--    主菜单区域-->
     <div class="main-menu">
-      <div class="item">
+      <div class="item" @click="goToCommon">
         <img src="@/assets/image/mainMenu/jiadianweixiu.png" alt="" />
         <text>家电维修</text>
       </div>
@@ -115,6 +127,12 @@ const drainCleaning = reactive<IMaintenanceMenu>({
     <MaintenanceMenu :MaintenanceMenu="homeApplianceInstallation" />
     <!--    管道疏通-->
     <MaintenanceMenu :MaintenanceMenu="drainCleaning" />
+    <!--    底部 tabbar-->
+    <van-tabbar v-model="active" @change="onChange">
+      <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item icon="description-o">订单</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
+    </van-tabbar>
   </main>
 </template>
 
