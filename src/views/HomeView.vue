@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import MaintenanceMenu from '@/components/MaintenanceMenu.vue'
-interface IHomeApplianceMaintenance {
+interface IMaintenanceMenu {
   title: string
   maintenanceObj: Array<{ id: string; imageUrl: string; text: string }>
 }
 
 // 家电维修
-const homeApplianceMaintenance = reactive<IHomeApplianceMaintenance>({
+const homeApplianceMaintenance = reactive<IMaintenanceMenu>({
   title: '家电维修',
   maintenanceObj: [
     {
@@ -24,6 +24,48 @@ const homeApplianceMaintenance = reactive<IHomeApplianceMaintenance>({
       id: '3',
       imageUrl: 'src/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png',
       text: '热水器维修'
+    }
+  ]
+})
+// 家电安装
+const homeApplianceInstallation = reactive<IMaintenanceMenu>({
+  title: '家电安装',
+  maintenanceObj: [
+    {
+      id: '4',
+      imageUrl: 'src/assets/image/homeApplianceInstallation/tp-kongtiaoanzhuangyiji.png',
+      text: '空调安装移机'
+    },
+    {
+      id: '5',
+      imageUrl: 'src/assets/image/homeApplianceInstallation/tp-dianshianzhaung.png',
+      text: '电视安装'
+    },
+    {
+      id: '6',
+      imageUrl: 'src/assets/image/homeApplianceInstallation/tp-dianreshuiqianzhuang.png',
+      text: '电热水器安装'
+    }
+  ]
+})
+// 管道疏通
+const drainCleaning = reactive<IMaintenanceMenu>({
+  title: '管道疏通',
+  maintenanceObj: [
+    {
+      id: '7',
+      imageUrl: 'src/assets/image/drainCleaning/tp-matongshutong.png',
+      text: '马桶疏通'
+    },
+    {
+      id: '8',
+      imageUrl: 'src/assets/image/drainCleaning/tp-diloushutong.png',
+      text: '地漏疏通'
+    },
+    {
+      id: '9',
+      imageUrl: 'src/assets/image/drainCleaning/tp-yugangshutong.png',
+      text: '浴缸疏通'
     }
   ]
 })
@@ -69,6 +111,10 @@ const homeApplianceMaintenance = reactive<IHomeApplianceMaintenance>({
     </div>
     <!--    家电维修-->
     <MaintenanceMenu :MaintenanceMenu="homeApplianceMaintenance" />
+    <!--    家电安装-->
+    <MaintenanceMenu :MaintenanceMenu="homeApplianceInstallation" />
+    <!--    管道疏通-->
+    <MaintenanceMenu :MaintenanceMenu="drainCleaning" />
   </main>
 </template>
 
