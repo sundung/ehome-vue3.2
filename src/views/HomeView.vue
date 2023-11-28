@@ -12,7 +12,7 @@
       <van-swipe-item>4</van-swipe-item>
     </van-swipe>
     <!--    主菜单区域-->
-    <div class="mainMenu">
+    <div class="main-menu">
       <div class="item">
         <img src="@/assets/image/mainMenu/jiadianweixiu.png" alt="" />
         <text>家电维修</text>
@@ -36,6 +36,24 @@
       <div class="item">
         <img src="@/assets/image/mainMenu/dianluweixiu.png" alt="" />
         <text>电路维修</text>
+      </div>
+    </div>
+    <!--    家电维修-->
+    <div class="home-appliance-maintenance">
+      <div class="title">家电维修</div>
+      <div class="content">
+        <div class="item">
+          <img src="@/assets/image/homeApplianceMaintenance/tp-kongtiaojiafu.png" alt="" />
+          <text>空调加氟</text>
+        </div>
+        <div class="item">
+          <img src="@/assets/image/homeApplianceMaintenance/tp-kongtiaoweixiu.png" alt="" />
+          <text>空调维修</text>
+        </div>
+        <div class="item">
+          <img src="@/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png" alt="" />
+          <text>热水器维修</text>
+        </div>
       </div>
     </div>
   </main>
@@ -64,7 +82,7 @@ main {
     }
   }
   //  主菜单区域
-  .mainMenu {
+  .main-menu {
     height: 188px;
     background-color: #fff;
     display: flex;
@@ -81,6 +99,36 @@ main {
         width: 40px;
         height: 40px;
         margin-bottom: 10px;
+      }
+    }
+  }
+  //  家电维修区域
+  .home-appliance-maintenance {
+    padding: 0 15px;
+    height: 200px;
+    background-color: #fff;
+    margin-top: 10px;
+
+    .title {
+      font-size: 18px;
+      height: 55px;
+      line-height: 55px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        img {
+          width: 105px;
+          height: 105px;
+          margin-bottom: 10px;
+        }
       }
     }
   }
