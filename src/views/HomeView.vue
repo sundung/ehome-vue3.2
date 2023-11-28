@@ -1,4 +1,33 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { reactive } from 'vue'
+import MaintenanceMenu from '@/components/MaintenanceMenu.vue'
+interface IHomeApplianceMaintenance {
+  title: string
+  maintenanceObj: Array<{ id: string; imageUrl: string; text: string }>
+}
+
+// 家电维修
+const homeApplianceMaintenance = reactive<IHomeApplianceMaintenance>({
+  title: '家电维修',
+  maintenanceObj: [
+    {
+      id: '1',
+      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-kongtiaojiafu.png',
+      text: '空调加氟'
+    },
+    {
+      id: '2',
+      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-kongtiaoweixiu.png',
+      text: '空调维修'
+    },
+    {
+      id: '3',
+      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png',
+      text: '热水器维修'
+    }
+  ]
+})
+</script>
 
 <template>
   <main>
@@ -39,23 +68,7 @@
       </div>
     </div>
     <!--    家电维修-->
-    <div class="home-appliance-maintenance">
-      <div class="title">家电维修</div>
-      <div class="content">
-        <div class="item">
-          <img src="@/assets/image/homeApplianceMaintenance/tp-kongtiaojiafu.png" alt="" />
-          <text>空调加氟</text>
-        </div>
-        <div class="item">
-          <img src="@/assets/image/homeApplianceMaintenance/tp-kongtiaoweixiu.png" alt="" />
-          <text>空调维修</text>
-        </div>
-        <div class="item">
-          <img src="@/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png" alt="" />
-          <text>热水器维修</text>
-        </div>
-      </div>
-    </div>
+    <MaintenanceMenu :MaintenanceMenu="homeApplianceMaintenance" />
   </main>
 </template>
 
@@ -103,34 +116,5 @@ main {
     }
   }
   //  家电维修区域
-  .home-appliance-maintenance {
-    padding: 0 15px;
-    height: 200px;
-    background-color: #fff;
-    margin-top: 10px;
-
-    .title {
-      font-size: 18px;
-      height: 55px;
-      line-height: 55px;
-    }
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-
-      .item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 16px;
-        img {
-          width: 105px;
-          height: 105px;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
 }
 </style>
