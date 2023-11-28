@@ -16,9 +16,9 @@
 .van-nav-bar {
   background-color:$van_nav_bar_background;
 
-  .van-nav-bar__content {
+  ::v-deep(.van-nav-bar__content)  {
     .van-nav-bar__title {
-      color:$van_nav_bar_text-color;
+      color:$van_nav_bar_text_color;
     }
   }
 
