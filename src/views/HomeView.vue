@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { showToast } from 'vant'
+import { useRouter } from 'vue-router'
 import MaintenanceMenu from '@/components/MaintenanceMenu.vue'
 interface IMaintenanceMenu {
   title: string
   maintenanceObj: Array<{ id: string; imageUrl: string; text: string }>
 }
+const router = useRouter()
 // tabbar
 const active = ref<number>(0)
 const onChange = (index: number) => {
@@ -17,7 +19,11 @@ const onChange = (index: number) => {
   showToast(`标签 ${index}`)
 }
 // 主菜单区域
-const goToCommon = () => {}
+const goToCommon = (navBarTitle: string) => {
+  console.log(navBarTitle)
+  console.log(router)
+  router.push({ path: '/HomeApplianceMaintenance', query: { navBarTitle } })
+}
 // 家电维修
 const homeApplianceMaintenance = reactive<IMaintenanceMenu>({
   title: '家电维修',
@@ -96,27 +102,27 @@ const drainCleaning = reactive<IMaintenanceMenu>({
     </van-swipe>
     <!--    主菜单区域-->
     <div class="main-menu">
-      <div class="item" @click="goToCommon">
+      <div class="item" @click="goToCommon('家电维修')">
         <img src="@/assets/image/mainMenu/jiadianweixiu.png" alt="" />
         <text>家电维修</text>
       </div>
-      <div class="item">
+      <div class="item" @click="goToCommon('家电清洗')">
         <img src="@/assets/image/mainMenu/jiadianqingxi.png" alt="" />
         <text>家电清洗</text>
       </div>
-      <div class="item">
+      <div class="item" @click="goToCommon('家电安装')">
         <img src="@/assets/image/mainMenu/jiadiananzhuang.png" alt="" />
         <text>家电安装</text>
       </div>
-      <div class="item">
+      <div class="item" @click="goToCommon('管道疏通')">
         <img src="@/assets/image/mainMenu/guandaoshutong.png" alt="" />
         <text>管道疏通</text>
       </div>
-      <div class="item">
+      <div class="item" @click="goToCommon('水路维修')">
         <img src="@/assets/image/mainMenu/shuiluweixiu.png" alt="" />
         <text>水路维修</text>
       </div>
-      <div class="item">
+      <div class="item" @click="goToCommon('电路维修')">
         <img src="@/assets/image/mainMenu/dianluweixiu.png" alt="" />
         <text>电路维修</text>
       </div>
