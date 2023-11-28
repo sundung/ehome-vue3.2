@@ -12,17 +12,17 @@ const homeApplianceMaintenance = reactive<IHomeApplianceMaintenance>({
   maintenanceObj: [
     {
       id: '1',
-      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-kongtiaojiafu.png',
+      imageUrl: 'src/assets/image/homeApplianceMaintenance/tp-kongtiaojiafu.png',
       text: '空调加氟'
     },
     {
       id: '2',
-      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-kongtiaoweixiu.png',
+      imageUrl: 'src/assets/image/homeApplianceMaintenance/tp-kongtiaoweixiu.png',
       text: '空调维修'
     },
     {
       id: '3',
-      imageUrl: '@/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png',
+      imageUrl: 'src/assets/image/homeApplianceMaintenance/tp-reshuiqiweixiu.png',
       text: '热水器维修'
     }
   ]
