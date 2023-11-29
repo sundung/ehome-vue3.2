@@ -72,6 +72,19 @@ console.log(title)
         </div>
       </div>
     </div>
+    <!--    收费说明-->
+    <div class="charges-notes">
+      <div class="title">收费说明</div>
+      <div class="content">
+        <div class="top">
+          空调维修免费上门、免费检测，根据维修项目收费标准和配件收费标准进行费用收取，费用透明，拒绝乱收费。如遇师傅私自乱收费，可向平台进行举报，不满意可重新服务！
+        </div>
+        <div class="bottom">维修总价=维修费+配件费（如有）+高空作业费（如有）</div>
+      </div>
+      <div class="footer">
+        <van-button plain type="primary">点击查看全部说明</van-button>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -171,7 +184,8 @@ console.log(title)
     .title {
       padding: 84px 0 15px;
       font-size: 14px;
-      color: #111111;
+      color: #111;
+      font-weight: 500;
     }
     .content {
       display: flex;
@@ -186,6 +200,52 @@ console.log(title)
           height: 16px;
           margin-right: 6px;
         }
+      }
+    }
+  }
+
+  //  收费说明
+  .charges-notes {
+    margin-top: 10px;
+    min-height: 185px;
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+
+    .title {
+      font-size: 14px;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .content {
+      font-size: 12px;
+      font-family:
+        PingFangSC,
+        PingFang SC;
+      font-weight: 400;
+      color: #666666;
+      line-height: 17px;
+      .top {
+        margin: 8px 0;
+      }
+      .bottom {
+        margin-bottom: 20px;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      .van-button--normal {
+        font-size: 12px;
+      }
+      .van-button {
+        width: 140px;
+        height: 32px;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #0090ff;
       }
     }
   }
