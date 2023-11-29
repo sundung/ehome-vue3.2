@@ -54,12 +54,30 @@ console.log(title)
         </div>
       </div>
     </div>
+    <!--    服务保障-->
+    <div class="service-assurance">
+      <div class="title">服务保障</div>
+      <div class="content">
+        <div class="item">
+          <img src="@/assets/image/icons/feiyong@2x.png" alt="" />
+          <div>无前期费用</div>
+        </div>
+        <div class="item">
+          <img src="@/assets/image/icons/pinzhibaozhang@2x.png" alt="" />
+          <div>品质有保障</div>
+        </div>
+        <div class="item">
+          <img src="@/assets/image/icons/shouhou@2x.png" alt="" />
+          <div>超长售后</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .home-appliance-maintenance {
   position: relative;
-  //  改变导航栏背景颜色
+  // 改变导航栏背景颜色
   .van-nav-bar {
     background-color: $van_nav_bar_background;
 
@@ -75,7 +93,7 @@ console.log(title)
       }
     }
   }
-  //banner 区域
+  // banner 区域
   .banner {
     img {
       width: 100vw;
@@ -83,7 +101,7 @@ console.log(title)
     }
   }
 
-  //  维修家电种类
+  // 维修家电种类
   .maintenance {
     position: absolute;
     top: 160px;
@@ -141,6 +159,33 @@ console.log(title)
         background-color: red;
         display: flex;
         justify-content: space-between;
+      }
+    }
+  }
+
+  // 服务保障
+  .service-assurance {
+    height: 150px;
+    background-color: #fff;
+    padding: 0 15px;
+    .title {
+      padding: 84px 0 15px;
+      font-size: 14px;
+      color: #111111;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .item {
+        font-size: 12px;
+        color: #333333;
+        display: flex;
+        img {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px;
+        }
       }
     }
   }
