@@ -5,6 +5,23 @@ const route = useRoute()
 const onClickLeft = () => history.back()
 const title = ref<string>(route.query.navBarTitle as string)
 console.log(title)
+
+// 点击查看全部说明
+const chargesNotesContentStyle = reactive({
+  height: '96px'
+})
+const chargesNotesContentShow = ref<boolean>(false)
+// 获取 ref
+const chargesNotesContentRef = ref<HTMLInputElement | null>(null)
+const clickForFullInstructions = () => {
+  console.log('点击查看全部说明')
+  chargesNotesContentShow.value = !chargesNotesContentShow.value
+  if (chargesNotesContentShow.value == true) {
+    chargesNotesContentStyle.height = '400px'
+  } else {
+    chargesNotesContentStyle.height = '96px'
+  }
+}
 </script>
 
 <template>
@@ -75,14 +92,16 @@ console.log(title)
     <!--    收费说明-->
     <div class="charges-notes">
       <div class="title">收费说明</div>
-      <div class="content">
+      <div class="content" ref="chargesNotesContentRef" :style="chargesNotesContentStyle">
         <div class="top">
           空调维修免费上门、免费检测，根据维修项目收费标准和配件收费标准进行费用收取，费用透明，拒绝乱收费。如遇师傅私自乱收费，可向平台进行举报，不满意可重新服务！
         </div>
         <div class="bottom">维修总价=维修费+配件费（如有）+高空作业费（如有）</div>
       </div>
       <div class="footer">
-        <van-button plain type="primary">点击查看全部说明</van-button>
+        <van-button plain type="primary" @click="clickForFullInstructions"
+          >点击查看全部说明</van-button
+        >
       </div>
     </div>
   </div>
