@@ -104,6 +104,11 @@ const clickForFullInstructions = () => {
         >
       </div>
     </div>
+
+    <!--    收费标准-->
+    <div class="charges-standard">
+      <div class="title">收费标准</div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -266,6 +271,20 @@ const clickForFullInstructions = () => {
         border-radius: 16px;
         border: 1px solid #0090ff;
       }
+    }
+  }
+
+  //  收费标准
+  .charges-standard {
+    margin-top: 10px;
+    padding: 0 15px;
+    min-height: 500px;
+    background-color: #fff;
+    .title {
+      font-size: 14px;
+      color: #111;
+      font-weight: 500;
+      padding: 15px 0;
     }
   }
 }
