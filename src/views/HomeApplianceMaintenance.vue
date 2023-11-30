@@ -109,9 +109,38 @@ const clickForFullInstructions = () => {
         >
       </div>
     </div>
-
     <!--    收费标准-->
     <ChargeStandard></ChargeStandard>
+    <!--    服务流程-->
+    <div class="service-process">
+      <div class="title">服务流程</div>
+      <div class="service-process-content">
+        <div class="item">
+          <img src="@/assets/image/icons/yuyue@2x.png" alt="" />
+          <text class="highlight">在线预约</text>
+          <text>报修问题 </text>
+          <text>免费下单</text>
+        </div>
+        <div class="item">
+          <img class="img" src="@/assets/image/icons/xiayibuliucheng@2x.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="@/assets/image/icons/weixiu@2x.png" alt="" />
+          <text class="highlight">确认维修</text>
+          <text>确认故障 </text>
+          <text>提交维修清单</text>
+        </div>
+        <div class="item">
+          <img class="img" src="@/assets/image/icons/xiayibuliucheng@2x.png" alt="" />
+        </div>
+        <div class="item">
+          <img src="@/assets/image/icons/yanshou@2x.png" alt="" />
+          <text class="highlight">验收</text>
+          <text>服务验收 </text>
+          <text>售后有保障</text>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -274,6 +303,49 @@ const clickForFullInstructions = () => {
         background: #fff;
         border-radius: 16px;
         border: 1px solid #0090ff;
+      }
+    }
+  }
+
+  //  服务流程
+  .service-process {
+    height: 136px;
+    background: #fff;
+    padding-left: 15px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    .title {
+      font-size: 14px;
+      font-family:
+        PingFangSC,
+        PingFang SC;
+      font-weight: 500;
+      color: #111;
+    }
+    .service-process-content {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        .highlight {
+          font-size: 14px;
+          color: #0090ff;
+          margin: 8px 0;
+        }
+        img {
+          width: 14px;
+          height: 14px;
+        }
+        .img {
+          width: 24px;
+          height: 2px;
+        }
       }
     }
   }
