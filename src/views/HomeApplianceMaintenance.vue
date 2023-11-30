@@ -8,19 +8,23 @@ const title = ref<string>(route.query.navBarTitle as string)
 console.log(title)
 
 // 点击查看全部说明
-const chargesNotesContentStyle = reactive({
-  height: '96px'
-})
 const chargesNotesContentShow = ref<boolean>(false)
 // 获取 ref
 const chargesNotesContentRef = ref<HTMLInputElement | null>(null)
+
 const clickForFullInstructions = () => {
   console.log('点击查看全部说明')
   chargesNotesContentShow.value = !chargesNotesContentShow.value
-  if (chargesNotesContentShow.value == true) {
-    chargesNotesContentStyle.height = '400px'
+
+  if (chargesNotesContentShow.value) {
+    // 解决 The left-hand side of an assignment expression may not be an optional property access. 报错
+    if (chargesNotesContentRef.value) {
+      chargesNotesContentRef.value.style.height = 40 + 'vh'
+    }
   } else {
-    chargesNotesContentStyle.height = '96px'
+    if (chargesNotesContentRef.value) {
+      chargesNotesContentRef.value.style.height = 17 + 'vh'
+    }
   }
 }
 </script>
@@ -93,7 +97,7 @@ const clickForFullInstructions = () => {
     <!--    收费说明-->
     <div class="charges-notes">
       <div class="title">收费说明</div>
-      <div class="content" ref="chargesNotesContentRef" :style="chargesNotesContentStyle">
+      <div class="content" ref="chargesNotesContentRef">
         <div class="top">
           空调维修免费上门、免费检测，根据维修项目收费标准和配件收费标准进行费用收取，费用透明，拒绝乱收费。如遇师傅私自乱收费，可向平台进行举报，不满意可重新服务！
         </div>
