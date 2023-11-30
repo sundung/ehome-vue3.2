@@ -131,8 +131,9 @@ const clickForFullInstructions = () => {
   }
   // banner 区域
   .banner {
+    width: 100%;
     img {
-      width: 100vw;
+      width: 100%;
       height: 140px;
     }
   }
