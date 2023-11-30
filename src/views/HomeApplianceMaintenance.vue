@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import ChargeStandard from '@/components/ChargeStandard.vue'
 const route = useRoute()
 const onClickLeft = () => history.back()
 const title = ref<string>(route.query.navBarTitle as string)
@@ -106,9 +107,7 @@ const clickForFullInstructions = () => {
     </div>
 
     <!--    收费标准-->
-    <div class="charges-standard">
-      <div class="title">收费标准</div>
-    </div>
+    <ChargeStandard></ChargeStandard>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -285,6 +284,18 @@ const clickForFullInstructions = () => {
       color: #111;
       font-weight: 500;
       padding: 15px 0;
+    }
+    .charges-standard-table {
+      .header {
+        width: 345px;
+        height: 37px;
+        font-size: 12px;
+        color: #111;
+        border: 1px solid #d7d7d7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
