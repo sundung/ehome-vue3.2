@@ -272,31 +272,5 @@ const clickForFullInstructions = () => {
       }
     }
   }
-
-  //  收费标准
-  .charges-standard {
-    margin-top: 10px;
-    padding: 0 15px;
-    min-height: 500px;
-    background-color: #fff;
-    .title {
-      font-size: 14px;
-      color: #111;
-      font-weight: 500;
-      padding: 15px 0;
-    }
-    .charges-standard-table {
-      .header {
-        width: 345px;
-        height: 37px;
-        font-size: 12px;
-        color: #111;
-        border: 1px solid #d7d7d7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
 }
 </style>
