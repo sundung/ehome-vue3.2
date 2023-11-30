@@ -141,6 +141,10 @@ const clickForFullInstructions = () => {
         </div>
       </div>
     </div>
+    <!--    在线预约按钮-->
+    <div class="online-appointment">
+      <van-button class="btn" plain type="primary">在线预约</van-button>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -347,6 +351,28 @@ const clickForFullInstructions = () => {
           height: 2px;
         }
       }
+    }
+  }
+
+  // 在线预约按钮
+  .online-appointment {
+    height: 80px;
+    background: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    .btn {
+      width: 345px;
+      height: 24px;
+      font-size: 16px;
+      font-family:
+        PingFangSC,
+        PingFang SC;
+      font-weight: 400;
+      color: #fff;
+      line-height: 24px;
+      height: 49px;
+      background: #0090ff;
+      border-radius: 4px;
     }
   }
 }
