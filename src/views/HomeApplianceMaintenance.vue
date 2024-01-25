@@ -42,37 +42,37 @@ const clickForFullInstructions = () => {
       <div class="item">
         <div class="left-wrapper">
           <text>空调加氟</text>
-          <img src="src/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
         </div>
         <div class="right-wrapper">
-          <img src="src/assets/image/icons/dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/dianji@2x.png" alt="" />
         </div>
       </div>
       <div class="item">
         <div class="left-wrapper">
           <text>空调加氟</text>
-          <img src="src/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
         </div>
         <div class="right-wrapper">
-          <img src="src/assets/image/icons/dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/dianji@2x.png" alt="" />
         </div>
       </div>
       <div class="item">
         <div class="left-wrapper">
           <text>空调加氟</text>
-          <img src="src/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
         </div>
         <div class="right-wrapper">
-          <img src="src/assets/image/icons/dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/dianji@2x.png" alt="" />
         </div>
       </div>
       <div class="item">
         <div class="left-wrapper">
           <text>空调加氟</text>
-          <img src="src/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/kongtiaojiafu-dianji@2x.png" alt="" />
         </div>
         <div class="right-wrapper">
-          <img src="src/assets/image/icons/dianji@2x.png" alt="" />
+          <img src="@/assets/image/icons/dianji@2x.png" alt="" />
         </div>
       </div>
     </div>
